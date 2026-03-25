@@ -1,163 +1,311 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMMONAI | The Golden Ratio of Business Intelligence</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        /* 기본 초기화 및 전체 폰트 설정 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #1A2533; /* 포실 네이비 */
-            color: #E0E5EC; /* 가독성 좋은 옅은 회색 */
-            font-family: 'Noto Sans KR', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        /* 중앙 컨텐츠 영역 */
-        .container {
-            max-width: 800px;
-            padding: 40px;
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-
-        /* 로고 스타일 (황금비율 느낌의 타이포그래피) */
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-        .logo span {
-            color: #B8860B; /* 앤틱 골드 */
-            font-family: 'Noto Sans KR', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        /* 메인 카피 */
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 16px;
-            color: #ffffff;
-            letter-spacing: -0.02em;
-        }
-
-        /* 서브 카피 */
-        p {
-            font-size: 1rem;
-            font-weight: 300;
-            line-height: 1.6;
-            color: #A0AAB5;
-            margin-bottom: 40px;
-            word-break: keep-all;
-        }
-
-        /* 이메일 입력 폼 (웨이트리스트) */
-        .waitlist-form {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 50px;
-        }
-        .waitlist-form input {
-            padding: 12px 20px;
-            font-size: 1rem;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(184, 134, 11, 0.3);
-            border-radius: 4px;
-            color: #ffffff;
-            width: 300px;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-        .waitlist-form input:focus {
-            border-color: #B8860B;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        .waitlist-form button {
-            padding: 12px 24px;
-            font-size: 1rem;
-            background-color: #B8860B; /* 골드 버튼 */
-            color: #1A2533;
-            border: none;
-            border-radius: 4px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .waitlist-form button:hover {
-            background-color: #D4AF37; /* 마우스 올렸을 때 밝은 골드 */
-        }
-
-        /* 푸터 */
-        .footer {
-            position: absolute;
-            bottom: 30px;
-            font-size: 0.8rem;
-            color: #6C7A89;
-            letter-spacing: 0.05em;
-        }
-
-        /* 등장 애니메이션 */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 모바일 반응형 처리 */
-        @media (max-width: 600px) {
-            .logo { font-size: 2.5rem; }
-            h1 { font-size: 1.4rem; }
-            .waitlist-form { flex-direction: column; align-items: center; }
-            .waitlist-form input { width: 100%; margin-bottom: 10px; }
-            .waitlist-form button { width: 100%; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMMONAI — Curated AI Intelligence for Professionals</title>
+<meta name="description" content="Discover, compare, and choose the right AI tools with timeless precision.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1A2533;--navy-light:#243040;--gold:#B8860B;--gold-light:#D4A843;--gold-dim:rgba(184,134,11,0.15);--ivory:#F8F6F1;--text-light:#E8E0D0;--text-muted:rgba(232,224,208,0.5);--font-d:'Playfair Display',Georgia,serif;--font-b:'DM Sans',sans-serif;--font-k:'Noto Sans KR',sans-serif;--r:6px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--navy);color:var(--text-light);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+[data-lang=ko] .en,[data-lang=en] .ko{display:none!important}
+button{cursor:pointer;font-family:var(--font-b)}a{text-decoration:none;color:inherit}input,select{font-family:var(--font-b)}
+#gate{position:fixed;inset:0;z-index:9999;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity .5s,visibility .5s}
+#gate.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.gate-card{max-width:440px;width:90%;text-align:center}
+.gate-logo{font-family:var(--font-d);font-size:28px;letter-spacing:6px;color:var(--text-light);margin-bottom:6px}.gate-logo span{color:var(--gold)}
+.gate-sub{font-size:13px;color:var(--text-muted);margin-bottom:40px;line-height:1.6}
+.gate-input{width:100%;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(184,134,11,.15);border-radius:var(--r);color:var(--text-light);font-size:15px;outline:none;transition:border .2s;margin-bottom:14px}
+.gate-input:focus{border-color:var(--gold)}.gate-input::placeholder{color:var(--text-muted)}
+.gate-btn{width:100%;padding:14px;background:var(--gold);color:var(--navy);border:none;border-radius:var(--r);font-size:14px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:background .2s}
+.gate-btn:hover{background:var(--gold-light)}
+.gate-err{font-size:12px;color:#e85d5d;margin-top:8px;min-height:18px}
+.gate-skip{margin-top:20px;font-size:12px;color:var(--text-muted);cursor:pointer;transition:color .2s}.gate-skip:hover{color:var(--gold)}
+.gate-lang{position:absolute;top:24px;right:24px}
+.gate-lang button{font-size:12px;color:var(--gold);background:none;border:1px solid rgba(184,134,11,.25);padding:4px 14px;border-radius:4px;letter-spacing:1px;transition:all .2s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;background:rgba(26,37,51,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(184,134,11,.06)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 28px}
+.nav-logo{font-family:var(--font-d);font-size:17px;letter-spacing:4px;color:var(--text-light)}.nav-logo span{color:var(--gold)}
+.nav-r{display:flex;align-items:center;gap:18px}.nav-r a{font-size:12px;color:var(--text-muted);letter-spacing:1px;transition:color .2s}.nav-r a:hover,.nav-r a.active{color:var(--gold)}
+.lang-btn{font-size:11px;color:var(--gold);background:none;border:1px solid rgba(184,134,11,.25);padding:3px 10px;border-radius:3px;letter-spacing:1px}
+.ctn{max-width:1100px;margin:0 auto;padding:0 28px}
+.page{display:none;padding-top:72px;min-height:100vh}.page.active{display:block}
+.hero{padding:70px 0 50px}
+.hero-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:.65;margin-bottom:18px}
+.hero h1{font-family:var(--font-d);font-size:clamp(30px,4.2vw,48px);font-weight:400;line-height:1.15;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:14px;color:var(--text-muted);max-width:520px;line-height:1.75;margin-bottom:28px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-gold{padding:11px 28px;background:var(--gold);color:var(--navy);border:none;border-radius:var(--r);font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-outline{padding:11px 28px;background:transparent;color:var(--gold);border:1px solid rgba(184,134,11,.35);border-radius:var(--r);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s}
+.btn-outline:hover{border-color:var(--gold);background:rgba(184,134,11,.04)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,.15),transparent);margin:40px 0}
+.sec-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:.55;margin-bottom:10px}
+.sec-title{font-family:var(--font-d);font-size:clamp(22px,2.8vw,34px);font-weight:400;margin-bottom:10px;line-height:1.2}
+.sec-desc{font-size:13px;color:var(--text-muted);max-width:480px;line-height:1.7;margin-bottom:32px}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cat-card{background:rgba(184,134,11,.03);border:1px solid rgba(184,134,11,.08);border-radius:var(--r);padding:22px 18px;transition:all .3s;cursor:pointer}
+.cat-card:hover{border-color:rgba(184,134,11,.35);background:rgba(184,134,11,.08);transform:translateY(-2px)}
+.cat-icon{width:32px;height:32px;margin-bottom:12px;border-radius:7px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center}
+.cat-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.cat-name{font-family:var(--font-d);font-size:15px;margin-bottom:4px;color:var(--text-light)}
+.cat-count{font-size:10px;color:var(--text-muted)}
+.tools-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.search-box{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.03);border:1px solid rgba(184,134,11,.1);border-radius:var(--r);padding:8px 12px;width:280px;max-width:100%}
+.search-box svg{width:15px;height:15px;stroke:var(--text-muted);fill:none;stroke-width:1.5;flex-shrink:0}
+.search-box input{flex:1;background:none;border:none;color:var(--text-light);font-size:13px;outline:none}
+.search-box input::placeholder{color:var(--text-muted)}
+.filter-tabs{display:flex;gap:5px;flex-wrap:wrap}
+.filter-tab{padding:5px 12px;font-size:10px;letter-spacing:.5px;border:1px solid rgba(184,134,11,.1);border-radius:16px;background:none;color:var(--text-muted);transition:all .2s}
+.filter-tab:hover,.filter-tab.active{color:var(--gold);border-color:rgba(184,134,11,.35);background:rgba(184,134,11,.06)}
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px}
+.tool-card{background:rgba(255,255,255,.02);border:1px solid rgba(184,134,11,.06);border-radius:var(--r);padding:20px;transition:all .3s}
+.tool-card:hover{border-color:rgba(184,134,11,.2);background:rgba(184,134,11,.03);transform:translateY(-2px)}
+.tool-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.tool-icon{width:32px;height:32px;border-radius:7px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:13px;color:var(--gold);flex-shrink:0}
+.tool-name{font-size:14px;font-weight:500}.tool-company{font-size:10px;color:var(--text-muted)}
+.tool-desc{font-size:11px;color:var(--text-muted);line-height:1.55;margin-bottom:10px;min-height:34px}
+.tool-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.tool-tag{font-size:9px;padding:2px 7px;border-radius:3px;background:rgba(184,134,11,.07);color:var(--gold);opacity:.7}
+.tool-pricing{font-size:10px;color:var(--gold);opacity:.5}
+.tool-link{display:inline-block;margin-top:6px;font-size:10px;color:var(--gold);border-bottom:1px solid rgba(184,134,11,.2);padding-bottom:1px}
+.no-results{text-align:center;padding:40px 0;color:var(--text-muted);font-size:13px;grid-column:1/-1}
+.tool-count-info{font-size:11px;color:var(--text-muted);margin-bottom:16px}
+.wizard-card{background:rgba(184,134,11,.03);border:1px solid rgba(184,134,11,.1);border-radius:8px;padding:36px;max-width:640px;margin:0 auto 40px}
+.wizard-q{font-family:var(--font-d);font-size:21px;font-weight:400;margin-bottom:6px;line-height:1.3}
+.wizard-sub{font-size:12px;color:var(--text-muted);margin-bottom:20px}
+.wizard-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.wizard-opt{padding:12px 16px;background:rgba(255,255,255,.02);border:1px solid rgba(184,134,11,.1);border-radius:var(--r);font-size:13px;color:var(--text-light);text-align:left;transition:all .2s}
+.wizard-opt:hover{border-color:var(--gold);background:rgba(184,134,11,.06)}
+.wizard-result{background:rgba(184,134,11,.04);border:1px solid rgba(184,134,11,.12);border-radius:var(--r);padding:16px;margin-bottom:10px}
+.wizard-result h4{font-family:var(--font-d);font-size:16px;margin-bottom:4px;color:var(--gold)}
+.wizard-result p{font-size:12px;color:var(--text-muted);line-height:1.55}
+.wizard-restart{font-size:11px;color:var(--text-muted);cursor:pointer;margin-top:10px;transition:color .2s}.wizard-restart:hover{color:var(--gold)}
+.nl-box{background:rgba(184,134,11,.03);border:1px solid rgba(184,134,11,.1);border-radius:8px;padding:40px;text-align:center;margin-bottom:40px}
+.nl-box h2{font-family:var(--font-d);font-size:22px;font-weight:400;margin-bottom:8px}
+.nl-box p{font-size:12px;color:var(--text-muted);max-width:360px;margin:0 auto 20px;line-height:1.6}
+.nl-form{display:flex;gap:8px;max-width:380px;margin:0 auto}
+.nl-form input{flex:1;padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(184,134,11,.12);border-radius:var(--r);color:var(--text-light);font-size:12px;outline:none}
+.nl-form input:focus{border-color:var(--gold)}.nl-form input::placeholder{color:var(--text-muted)}
+.nl-form button{padding:10px 20px;background:var(--gold);color:var(--navy);border:none;border-radius:var(--r);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+footer{padding:36px 0 24px;border-top:1px solid rgba(184,134,11,.06)}
+.foot-in{display:flex;justify-content:space-between;align-items:center}
+.foot-brand{font-family:var(--font-d);font-size:14px;letter-spacing:3px;color:var(--text-muted)}.foot-brand span{color:var(--gold)}
+.foot-copy{font-size:10px;color:var(--text-muted);opacity:.4}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp .5s ease both}.ad1{animation-delay:.1s}.ad2{animation-delay:.2s}.ad3{animation-delay:.3s}
+@media(max-width:768px){.cat-grid{grid-template-columns:repeat(2,1fr)}.tools-grid{grid-template-columns:1fr}.tools-header{flex-direction:column;align-items:stretch}.search-box{width:100%}.wizard-options{grid-template-columns:1fr}.wizard-card{padding:24px 18px}.nl-form{flex-direction:column}.hero-btns{flex-direction:column}.foot-in{flex-direction:column;gap:10px;text-align:center}}
+@media(max-width:480px){.cat-grid{grid-template-columns:1fr}}
+</style>
 </head>
-<body>
+<body data-lang="en">
+<div id="gate"><div class="gate-lang"><button onclick="toggleLang()"><span class="en">KR</span><span class="ko">EN</span></button></div><div class="gate-card"><div class="gate-logo">AMMON<span>AI</span></div><p class="gate-sub"><span class="en">Curated AI intelligence for professionals<br>who value precision over popularity.</span><span class="ko">인기보다 정밀함을 중시하는<br>프로페셔널을 위한 AI 인텔리전스.</span></p><input type="email" id="gate-email" class="gate-input"><button class="gate-btn" onclick="enterSite()"><span class="en">ENTER</span><span class="ko">입장하기</span></button><div class="gate-err" id="gate-err"></div><div class="gate-skip" onclick="skipGate()"><span class="en">Browse as guest</span><span class="ko">게스트로 둘러보기</span></div></div></div>
 
-    <div class="container">
-        <div class="logo">AMMONAI<span>.ai</span></div>
-        
-        <h1>비즈니스의 황금비율을 완성하는 지능</h1>
-        
-        <p>수만 개의 AI 도구 중, 당신의 성과를 극대화할 단 1%의 조합만을 엄선합니다.<br>
-        전문가의 시각으로 검증된 AI 큐레이션 플랫폼이 곧 찾아옵니다.</p>
+<nav><div class="nav-in"><a href="#" class="nav-logo" onclick="showPage('home')">AMMON<span>AI</span></a><div class="nav-r"><a href="#" onclick="showPage('home')" id="nav-home" class="active"><span class="en">Home</span><span class="ko">홈</span></a><a href="#" onclick="showPage('browse')" id="nav-browse"><span class="en">Browse</span><span class="ko">탐색</span></a><a href="#" onclick="showPage('wizard')" id="nav-wizard"><span class="en">Find My Tool</span><span class="ko">도구 추천</span></a><button class="lang-btn" onclick="toggleLang()"><span class="en">KR</span><span class="ko">EN</span></button></div></div></nav>
 
-        <form class="waitlist-form" onsubmit="event.preventDefault(); alert('사전 예약이 완료되었습니다. (테스트용)');">
-            <input type="email" placeholder="업무용 이메일을 입력해주세요" required>
-            <button type="submit">사전 예약하기</button>
-        </form>
-    </div>
+<div class="page active" id="page-home"><div class="ctn">
+<div class="hero"><div class="hero-tag anim"><span class="en">Curated AI Intelligence</span><span class="ko">큐레이팅된 AI 인텔리전스</span></div>
+<h1 class="anim ad1"><span class="en">Find the <em>right</em> AI tool,<br>not just the popular one</span><span class="ko">인기 있는 것이 아닌,<br><em>맞는</em> AI 도구를 찾으세요</span></h1>
+<p class="hero-desc anim ad2"><span class="en">AMMONAI curates, compares, and rates AI tools with the precision of a professional analyst. Built for business leaders who make decisions based on data, not hype.</span><span class="ko">AMMONAI는 전문 애널리스트의 정밀함으로 AI 도구를 큐레이션하고, 비교하고, 평가합니다. 유행이 아닌 데이터에 기반한 의사결정을 하는 비즈니스 리더를 위해 만들었습니다.</span></p>
+<div class="hero-btns anim ad3"><button class="btn-gold" onclick="showPage('browse')"><span class="en">EXPLORE TOOLS</span><span class="ko">도구 탐색하기</span></button><button class="btn-outline" onclick="showPage('wizard')"><span class="en">FIND MY TOOL</span><span class="ko">나에게 맞는 도구 찾기</span></button></div></div>
+<div class="divider"></div>
+<div class="sec-tag"><span class="en">Categories</span><span class="ko">카테고리</span></div>
+<div class="sec-title"><span class="en">Every branch of AI, carefully examined</span><span class="ko">AI의 모든 분야를 꼼꼼하게 분석합니다</span></div>
+<div class="cat-grid" id="cat-grid"></div>
+<div class="divider"></div>
+<div class="nl-box"><h2><span class="en">The AMMONAI Brief</span><span class="ko">AMMONAI 위클리 브리프</span></h2><p><span class="en">Weekly curation of the most important AI tool launches and insights.</span><span class="ko">매주 가장 중요한 AI 도구 출시와 인사이트를 큐레이션합니다.</span></p><div class="nl-form"><input type="email" placeholder="your@email.com"><button><span class="en">SUBSCRIBE</span><span class="ko">구독</span></button></div></div>
+</div></div>
 
-    <div class="footer">
-        © 2026 AMMONAI. The Golden Ratio of Business Intelligence.
-    </div>
+<div class="page" id="page-browse"><div class="ctn" style="padding-top:28px;padding-bottom:40px">
+<div class="sec-tag"><span class="en">Browse Tools</span><span class="ko">도구 탐색</span></div>
+<div class="sec-title"><span class="en">Ammonai's Collection</span><span class="ko">Ammonai's Collection</span></div>
+<div class="sec-desc"><span class="en">Curated and evaluated AI tools across every category that matters.</span><span class="ko">중요한 모든 카테고리에서 큐레이션되고 평가된 AI 도구들.</span></div>
+<div class="tools-header"><div class="search-box"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input type="text" id="search-input" oninput="filterTools()"></div><div class="filter-tabs" id="filter-tabs"></div></div>
+<div class="tool-count-info" id="tool-count-info"></div>
+<div class="tools-grid" id="tools-grid"></div>
+</div></div>
 
+<div class="page" id="page-wizard"><div class="ctn" style="padding-top:28px;padding-bottom:40px">
+<div class="sec-tag"><span class="en">AI Tool Finder</span><span class="ko">AI 도구 추천</span></div>
+<div class="sec-title" style="margin-bottom:28px"><span class="en">What do you need help with?</span><span class="ko">어떤 도움이 필요하세요?</span></div>
+<div class="wizard-card" id="wizard-card"></div>
+</div></div>
+
+<footer><div class="ctn"><div class="foot-in"><div class="foot-brand">AMMON<span>AI</span></div><div class="foot-copy">&copy; 2026 AMMONAI. The Golden Ratio of Business Intelligence.</div></div></div></footer>
+
+<script>
+var CATS=[
+{id:'data',en:'Data Analysis',ko:'데이터 분석',svg:'<path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 5-9"/>'},
+{id:'writing',en:'Writing & Content',ko:'작문 & 콘텐츠',svg:'<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/>'},
+{id:'automation',en:'Automation & Agents',ko:'자동화 & 에이전트',svg:'<path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>'},
+{id:'design',en:'Design & Creative',ko:'디자인 & 크리에이티브',svg:'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>'},
+{id:'video',en:'Video & Audio',ko:'비디오 & 오디오',svg:'<polygon points="5 3 19 12 5 21 5 3"/><line x1="19" y1="3" x2="19" y2="21" opacity=".3"/>'},
+{id:'coding',en:'Coding & Development',ko:'코딩 & 개발',svg:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>'}
+];
+var T=[
+// DATA ANALYSIS
+{id:'claude',name:'Claude',company:'Anthropic',cat:'data',en:'Advanced AI with 1M context window. Best for analysis, writing, coding. SOC 2 certified.',ko:'1M 컨텍스트 윈도우의 AI. 분석, 작문, 코딩 최강. SOC 2 인증.',tags:['Analysis','Writing','Coding','API'],price:'Free / $20 Pro',url:'claude.ai',icon:'C'},
+{id:'chatgpt',name:'ChatGPT',company:'OpenAI',cat:'data',en:'The most popular AI. GPT-4o with deep research, image gen, web search, plugins.',ko:'가장 인기 있는 AI. GPT-4o, 딥 리서치, 이미지 생성, 웹 검색, 플러그인.',tags:['General','Research','Plugins'],price:'Free / $20 Plus',url:'chatgpt.com',icon:'G'},
+{id:'gemini',name:'Gemini',company:'Google',cat:'data',en:'Deep Google Workspace integration. Best for Docs, Sheets, Gmail power users.',ko:'Google Workspace 깊은 통합. Docs, Sheets, Gmail 파워유저에게 최적.',tags:['Google','Workspace','Multimodal'],price:'Free / $20 Advanced',url:'gemini.google.com',icon:'Ge'},
+{id:'perplexity',name:'Perplexity',company:'Perplexity AI',cat:'data',en:'AI research engine with real-time citations. Deep Research mode for comprehensive reports.',ko:'실시간 인용 AI 리서치 엔진. 딥 리서치로 포괄적 보고서 생성.',tags:['Research','Search','Citations'],price:'Free / $20 Pro',url:'perplexity.ai',icon:'P'},
+{id:'julius',name:'Julius AI',company:'Julius Technology',cat:'data',en:'Upload CSV/Excel for instant charts and analysis. Built for business analysts.',ko:'CSV/Excel 업로드 시 즉시 차트와 분석. 비즈니스 분석가를 위해 설계.',tags:['Data','Charts','CSV','Excel'],price:'Free / $20/mo',url:'julius.ai',icon:'J'},
+{id:'tableau',name:'Tableau AI',company:'Salesforce',cat:'data',en:'Enterprise BI with AI insights. Natural language queries for complex dashboards.',ko:'AI 인사이트가 추가된 엔터프라이즈 BI. 복잡한 대시보드에 자연어 쿼리.',tags:['BI','Dashboard','Enterprise'],price:'$75/mo',url:'tableau.com',icon:'T'},
+{id:'notebooklm',name:'NotebookLM',company:'Google',cat:'data',en:'Upload your docs and get AI answers based only on your sources. Zero hallucination risk.',ko:'문서 업로드 후 소스 기반 AI 답변. 환각 위험 제로.',tags:['Research','Docs','Free'],price:'Free',url:'notebooklm.google',icon:'NL'},
+{id:'grok',name:'Grok',company:'xAI',cat:'data',en:'Real-time X/Twitter data. Deep Search + Think mode for complex reasoning tasks.',ko:'실시간 X/Twitter 데이터. 복잡한 추론을 위한 Deep Search + Think 모드.',tags:['Real-time','X/Twitter','Reasoning'],price:'Free on X / $30 SuperGrok',url:'x.com/grok',icon:'Gk'},
+// WRITING
+{id:'notion',name:'Notion AI',company:'Notion Labs',cat:'writing',en:'AI writing embedded in your workspace. Docs, wikis, project management all-in-one.',ko:'워크스페이스 내장 AI 작문. 문서, 위키, 프로젝트 관리 올인원.',tags:['Writing','Docs','Korean','Teams'],price:'$10/mo add-on',url:'notion.so',icon:'N'},
+{id:'grammarly',name:'Grammarly',company:'Grammarly Inc',cat:'writing',en:'Grammar, clarity, tone. Browser extension works everywhere you write.',ko:'문법, 명확성, 톤 교정. 브라우저 확장으로 어디서든 사용.',tags:['Grammar','Extension','Writing'],price:'Free / $12/mo',url:'grammarly.com',icon:'Gr'},
+{id:'jasper',name:'Jasper',company:'Jasper AI',cat:'writing',en:'Marketing content platform. Brand voice, campaigns, SEO content at scale.',ko:'마케팅 콘텐츠 플랫폼. 브랜드 보이스, 캠페인, SEO 대량 생산.',tags:['Marketing','SEO','Brand'],price:'$39/mo',url:'jasper.ai',icon:'Js'},
+{id:'copy',name:'Copy.ai',company:'Copy.ai',cat:'writing',en:'AI sales and marketing workflows. Generate leads, emails, social posts automatically.',ko:'AI 영업/마케팅 워크플로우. 리드, 이메일, 소셜 포스트 자동 생성.',tags:['Sales','Email','Social'],price:'Free / $36/mo',url:'copy.ai',icon:'Cp'},
+{id:'writesonic',name:'Writesonic',company:'Writesonic',cat:'writing',en:'SEO-optimized blog writer with real-time web data. Includes AI chatbot builder.',ko:'실시간 웹 데이터로 SEO 최적화 블로그 작성. AI 챗봇 빌더 포함.',tags:['SEO','Blog','Chatbot'],price:'Free / $16/mo',url:'writesonic.com',icon:'W'},
+{id:'otter',name:'Otter.ai',company:'Otter.ai',cat:'writing',en:'AI meeting transcription and notes. Real-time captions, speaker identification.',ko:'AI 회의 녹음 및 메모. 실시간 자막, 화자 식별.',tags:['Meetings','Transcription','Notes'],price:'Free / $17/mo',url:'otter.ai',icon:'Ot'},
+{id:'quillbot',name:'QuillBot',company:'Course Hero',cat:'writing',en:'Paraphrasing, summarizing, grammar checking. Academic and professional writing.',ko:'패러프레이징, 요약, 문법 검사. 학술 및 전문 작문용.',tags:['Paraphrase','Academic','Grammar'],price:'Free / $10/mo',url:'quillbot.com',icon:'Q'},
+// AUTOMATION
+{id:'zapier',name:'Zapier',company:'Zapier Inc',cat:'automation',en:'Connect 7,000+ apps with no-code workflows. Now with AI Agents for autonomous tasks.',ko:'7,000개 이상 앱을 노코드 워크플로우로 연결. AI Agents로 자율 작업.',tags:['No-code','Integration','Agents'],price:'Free / $20/mo',url:'zapier.com',icon:'Z'},
+{id:'make',name:'Make',company:'Celonis',cat:'automation',en:'Visual automation with complex branching. More power than Zapier for technical flows.',ko:'복잡한 분기의 비주얼 자동화. 기술적 워크플로우에 Zapier보다 강력.',tags:['Visual','Advanced','Branching'],price:'Free / $9/mo',url:'make.com',icon:'Mk'},
+{id:'n8n',name:'n8n',company:'n8n GmbH',cat:'automation',en:'Open-source workflow automation. Chain LLMs with tools. Self-host for full control.',ko:'오픈소스 워크플로우 자동화. LLM과 도구 연결. 셀프 호스팅 가능.',tags:['Open-source','LLM','Self-host'],price:'Free (self-host) / $20/mo',url:'n8n.io',icon:'n8'},
+{id:'dify',name:'Dify',company:'Dify AI',cat:'automation',en:'Open-source LLM app platform. Build AI agents and RAG pipelines visually.',ko:'오픈소스 LLM 앱 플랫폼. AI 에이전트와 RAG 파이프라인 비주얼 구축.',tags:['LLM','Agents','RAG','Open-source'],price:'Free / $59/mo',url:'dify.ai',icon:'D'},
+{id:'copilot365',name:'Microsoft Copilot',company:'Microsoft',cat:'automation',en:'AI inside Excel, PowerPoint, Teams, Outlook. Best for Microsoft 365 ecosystem.',ko:'Excel, PowerPoint, Teams, Outlook 내장 AI. Microsoft 365 생태계 최적.',tags:['Microsoft','Excel','Enterprise'],price:'$30/mo per user',url:'copilot.microsoft.com',icon:'MC'},
+{id:'botpress',name:'Botpress',company:'Botpress',cat:'automation',en:'Developer-first chatbot builder. Knowledge bases, multi-channel deployment.',ko:'개발자 중심 챗봇 빌더. 지식 베이스, 멀티채널 배포.',tags:['Chatbot','Developer','Multi-channel'],price:'Free / $79/mo',url:'botpress.com',icon:'B'},
+// DESIGN
+{id:'midjourney',name:'Midjourney',company:'Midjourney Inc',cat:'design',en:'Highest quality AI image generation. Artistic and photorealistic via Discord or web.',ko:'최고 품질 AI 이미지 생성. Discord 또는 웹으로 예술적/포토리얼 이미지.',tags:['Image Gen','Art','Photorealistic'],price:'$10/mo',url:'midjourney.com',icon:'M'},
+{id:'canva',name:'Canva AI',company:'Canva',cat:'design',en:'Design platform with Magic Design, background remover, text-to-image. Non-designers love it.',ko:'매직 디자인, 배경 제거, 텍스트-이미지. 비디자이너에게 최적.',tags:['Templates','Social','Korean'],price:'Free / $13/mo',url:'canva.com',icon:'Ca'},
+{id:'gamma',name:'Gamma',company:'Gamma Tech',cat:'design',en:'AI presentations from text prompts. Beautiful slides in seconds, no design skills needed.',ko:'텍스트 프롬프트로 AI 프레젠테이션. 디자인 스킬 없이 수초 내 슬라이드.',tags:['Presentations','Slides','Docs'],price:'Free / $10/mo',url:'gamma.app',icon:'Ga'},
+{id:'v0',name:'v0',company:'Vercel',cat:'design',en:'AI UI generator. Describe a component, get production-ready React/Tailwind code.',ko:'AI UI 생성기. 컴포넌트 설명하면 프로덕션 React/Tailwind 코드 생성.',tags:['UI Design','React','Code'],price:'Free / $20/mo',url:'v0.dev',icon:'V'},
+{id:'dall-e',name:'DALL-E 3',company:'OpenAI',cat:'design',en:'Text-to-image inside ChatGPT. Best text rendering in images. Easy to use.',ko:'ChatGPT 내장 텍스트-이미지. 이미지 내 텍스트 렌더링 최강. 사용 쉬움.',tags:['Image Gen','ChatGPT','Text-in-image'],price:'Included in ChatGPT Plus',url:'chatgpt.com',icon:'DE'},
+{id:'figma',name:'Figma AI',company:'Figma',cat:'design',en:'AI features in the leading design tool. Auto-layout, asset search, design suggestions.',ko:'선도적 디자인 도구에 AI 기능 추가. 자동 레이아웃, 에셋 검색, 디자인 제안.',tags:['UI/UX','Prototyping','Teams'],price:'Free / $15/mo',url:'figma.com',icon:'F'},
+{id:'ideogram',name:'Ideogram',company:'Ideogram AI',cat:'design',en:'Image generation with perfect text rendering. Logos, posters, typography-heavy designs.',ko:'완벽한 텍스트 렌더링 이미지 생성. 로고, 포스터, 타이포그래피 디자인.',tags:['Image Gen','Typography','Logos'],price:'Free / $8/mo',url:'ideogram.ai',icon:'Id'},
+// VIDEO & AUDIO
+{id:'runway',name:'Runway',company:'Runway AI',cat:'video',en:'AI video generation + editing. Gen-3 for cinematic clips. Motion Brush, Director Mode.',ko:'AI 비디오 생성+편집. Gen-3 시네마틱 클립. Motion Brush, Director Mode.',tags:['Video Gen','Editing','Creative'],price:'Free / $12/mo',url:'runwayml.com',icon:'R'},
+{id:'heygen',name:'HeyGen',company:'HeyGen',cat:'video',en:'AI avatar videos. Script to video with lip-sync in 175+ languages. Sales & training.',ko:'AI 아바타 비디오. 175개 이상 언어 립싱크. 영업 & 교육용.',tags:['Avatar','Lip-sync','Localization'],price:'Free / $24/mo',url:'heygen.com',icon:'H'},
+{id:'sora',name:'Sora',company:'OpenAI',cat:'video',en:'Cinematic AI video from text. Story-driven clips with dialogue and emotional coherence.',ko:'텍스트에서 시네마틱 AI 비디오. 대화와 감정이 일관된 스토리 클립.',tags:['Video Gen','Cinematic','Story'],price:'Included in ChatGPT Plus',url:'sora.com',icon:'So'},
+{id:'elevenlabs',name:'ElevenLabs',company:'ElevenLabs',cat:'video',en:'Most realistic AI voices. Voice cloning, 300+ voices, 32 languages. Podcasts & videos.',ko:'가장 사실적인 AI 음성. 보이스 클로닝, 300+ 음성, 32개 언어.',tags:['Voice','Cloning','Multilingual'],price:'Free / $5/mo',url:'elevenlabs.io',icon:'11'},
+{id:'descript',name:'Descript',company:'Descript',cat:'video',en:'Edit video/audio by editing text transcript. Remove filler words, fix takes. Podcasters love it.',ko:'텍스트 트랜스크립트 편집으로 비디오/오디오 편집. 팟캐스터에게 인기.',tags:['Podcast','Editing','Transcription'],price:'Free / $24/mo',url:'descript.com',icon:'Ds'},
+{id:'suno',name:'Suno',company:'Suno AI',cat:'video',en:'Generate full songs with vocals from text prompts. Music creation for non-musicians.',ko:'텍스트에서 보컬 포함 전체 노래 생성. 비음악인을 위한 음악 창작.',tags:['Music','Songs','Vocals'],price:'Free / $10/mo',url:'suno.com',icon:'Su'},
+{id:'kling',name:'Kling',company:'Kuaishou',cat:'video',en:'Best quality-to-price AI video. Multi-shot sequences, character consistency, multi-character audio.',ko:'최고 가성비 AI 비디오. 멀티샷 시퀀스, 캐릭터 일관성, 멀티 캐릭터 오디오.',tags:['Video Gen','Multi-shot','Budget'],price:'Free tier / $7/mo',url:'klingai.com',icon:'K'},
+{id:'pika',name:'Pika',company:'Pika Labs',cat:'video',en:'Fun AI video effects. Pikaffects squash/melt objects. Pikaframes for start-to-end morphing.',ko:'재미있는 AI 비디오 효과. Pikaffects로 오브젝트 변형. Pikaframes 모핑.',tags:['Effects','Fun','Creative'],price:'Free / $8/mo',url:'pika.art',icon:'Pi'},
+// CODING
+{id:'cursor',name:'Cursor',company:'Anysphere',cat:'coding',en:'AI-first IDE (VS Code fork). Composer Mode edits multiple files. Best coding AI tool of 2026.',ko:'AI 중심 IDE (VS Code 포크). Composer Mode로 멀티파일 편집. 2026 최고의 코딩 AI.',tags:['IDE','Multi-file','Best-in-class'],price:'Free / $20/mo',url:'cursor.com',icon:'Cu'},
+{id:'copilot',name:'GitHub Copilot',company:'GitHub',cat:'coding',en:'AI pair programmer. Real-time code suggestions in VS Code. Essential for devs.',ko:'AI 페어 프로그래머. VS Code 실시간 코드 제안. 개발자 필수.',tags:['VS Code','Autocomplete','GitHub'],price:'$10/mo',url:'github.com/copilot',icon:'Co'},
+{id:'lovable',name:'Lovable',company:'Lovable',cat:'coding',en:'No-code AI app builder. Describe in English, get a deployed React app with backend.',ko:'노코드 AI 앱 빌더. 영어로 설명하면 백엔드 포함 React 앱 배포.',tags:['No-code','Web Apps','React'],price:'Free / $20/mo',url:'lovable.dev',icon:'L'},
+{id:'bolt',name:'Bolt.new',company:'StackBlitz',cat:'coding',en:'Full-stack AI builder with terminal, GitHub, Supabase, Stripe integrations.',ko:'터미널, GitHub, Supabase, Stripe 통합 풀스택 AI 빌더.',tags:['Full-stack','Integrations','Terminal'],price:'Free / $20/mo',url:'bolt.new',icon:'Bt'},
+{id:'replit',name:'Replit Agent',company:'Replit',cat:'coding',en:'AI builds entire apps from description. Deploy instantly. Good for prototyping.',ko:'설명에서 전체 앱 빌드. 즉시 배포. 프로토타이핑에 적합.',tags:['Prototyping','Deploy','Cloud IDE'],price:'Free / $25/mo',url:'replit.com',icon:'Re'},
+{id:'windsurf',name:'Windsurf',company:'Codeium',cat:'coding',en:'AI IDE with Cascade agent. Understands full codebase context. Strong free tier.',ko:'Cascade 에이전트 AI IDE. 전체 코드베이스 컨텍스트 이해. 강력한 무료 플랜.',tags:['IDE','Agent','Free tier'],price:'Free / $15/mo',url:'windsurf.com',icon:'Wi'},
+{id:'claude-code',name:'Claude Code',company:'Anthropic',cat:'coding',en:'Terminal-based agentic coding. Delegates tasks from CLI. Best for complex refactoring.',ko:'터미널 기반 에이전틱 코딩. CLI에서 작업 위임. 복잡한 리팩토링에 최적.',tags:['CLI','Agentic','Refactoring'],price:'API usage based',url:'claude.ai',icon:'CC'},
+{id:'qwen',name:'Qwen Chat',company:'Alibaba',cat:'coding',en:'Free full toolkit: chat, code, web gen, podcast maker, image editor. 119 languages.',ko:'무료 올인원: 채팅, 코드, 웹 생성, 팟캐스트, 이미지 편집. 119개 언어.',tags:['Free','Multilingual','Open-source'],price:'Free',url:'chat.qwenlm.ai',icon:'Qw'}
+];
+
+var WIZARD={
+start:{en:'What do you need to accomplish today?',ko:'오늘 어떤 업무를 처리하고 싶으세요?',sub_en:'Pick the closest match to get personalized recommendations.',sub_ko:'가장 가까운 항목을 선택하면 맞춤 추천을 받을 수 있습니다.',
+options:[
+{en:'Analyze data or build reports',ko:'데이터 분석 또는 보고서 작성',next:'data_q'},
+{en:'Write content or documents',ko:'콘텐츠 또는 문서 작성',next:'write_q'},
+{en:'Automate tasks or build agents',ko:'작업 자동화 또는 에이전트 구축',next:'auto_q'},
+{en:'Create images or designs',ko:'이미지 또는 디자인 제작',next:'design_q'},
+{en:'Make videos or audio content',ko:'비디오 또는 오디오 콘텐츠 제작',next:'video_q'},
+{en:'Build a website or app',ko:'웹사이트 또는 앱 개발',next:'dev_q'},
+{en:'Do market research',ko:'시장 조사하기',next:'research_q'},
+{en:'Manage meetings or notes',ko:'회의 관리 또는 메모 정리',next:'meeting_q'},
+{en:'Create presentations',ko:'프레젠테이션 만들기',next:'ppt_q'},
+{en:'Learn or study something new',ko:'새로운 것 학습하기',next:'learn_q'}
+]},
+data_q:{en:'What kind of data work?',ko:'어떤 데이터 작업인가요?',sub_en:'Different tools for different data needs.',sub_ko:'데이터 요구에 따라 최적 도구가 다릅니다.',
+options:[
+{en:'CSV/Excel analysis with charts',ko:'CSV/Excel 분석 + 차트',result:['julius','claude','gemini']},
+{en:'Market research with sources',ko:'출처 포함 시장 조사',result:['perplexity','claude','grok']},
+{en:'Enterprise dashboards / BI',ko:'엔터프라이즈 대시보드 / BI',result:['tableau','copilot365','julius']},
+{en:'General data questions',ko:'일반 데이터 질문',result:['claude','chatgpt','gemini']},
+{en:'Analyze my own documents only',ko:'내 문서만 분석하기',result:['notebooklm','claude','chatgpt']}
+]},
+write_q:{en:'What are you writing?',ko:'무엇을 작성하시나요?',sub_en:'Each tool excels at different content types.',sub_ko:'콘텐츠 유형에 따라 최적 도구가 다릅니다.',
+options:[
+{en:'Blog posts / SEO content',ko:'블로그 / SEO 콘텐츠',result:['jasper','writesonic','chatgpt']},
+{en:'Business reports / analysis',ko:'비즈니스 보고서 / 분석',result:['claude','notion','chatgpt']},
+{en:'Emails / professional writing',ko:'이메일 / 비즈니스 작문',result:['grammarly','claude','copy']},
+{en:'Social media / marketing',ko:'소셜 미디어 / 마케팅',result:['copy','jasper','canva']},
+{en:'Academic / research papers',ko:'학술 / 연구 논문',result:['quillbot','claude','perplexity']},
+{en:'Internal docs / wikis',ko:'내부 문서 / 위키',result:['notion','claude','chatgpt']}
+]},
+auto_q:{en:'What do you want to automate?',ko:'무엇을 자동화하고 싶으세요?',sub_en:'From simple connections to full AI agents.',sub_ko:'간단한 연결부터 풀 AI 에이전트까지.',
+options:[
+{en:'Connect apps (Slack, email, etc)',ko:'앱 연결 (Slack, 이메일 등)',result:['zapier','make','n8n']},
+{en:'Build AI chatbots',ko:'AI 챗봇 구축',result:['botpress','dify','zapier']},
+{en:'Build AI agents / workflows',ko:'AI 에이전트 / 워크플로우 구축',result:['n8n','dify','zapier']},
+{en:'Automate Microsoft Office tasks',ko:'Microsoft Office 작업 자동화',result:['copilot365','zapier','make']}
+]},
+design_q:{en:'What kind of visuals?',ko:'어떤 비주얼을 만드시나요?',sub_en:'Each tool has distinct creative strengths.',sub_ko:'각 도구별 고유한 크리에이티브 강점이 있습니다.',
+options:[
+{en:'Photorealistic / artistic images',ko:'포토리얼 / 예술적 이미지',result:['midjourney','dall-e','ideogram']},
+{en:'Logos / typography designs',ko:'로고 / 타이포그래피 디자인',result:['ideogram','canva','midjourney']},
+{en:'Social media graphics',ko:'소셜 미디어 그래픽',result:['canva','dall-e','midjourney']},
+{en:'UI/UX mockups',ko:'UI/UX 목업',result:['figma','v0','canva']},
+{en:'Quick design (non-designer)',ko:'빠른 디자인 (비디자이너)',result:['canva','gamma','dall-e']}
+]},
+video_q:{en:'What kind of video/audio?',ko:'어떤 비디오/오디오인가요?',sub_en:'The AI video landscape is evolving fast.',sub_ko:'AI 비디오 분야는 빠르게 발전하고 있습니다.',
+options:[
+{en:'Cinematic / story videos',ko:'시네마틱 / 스토리 비디오',result:['sora','kling','runway']},
+{en:'Avatar / talking head videos',ko:'아바타 / 토킹헤드 비디오',result:['heygen','sora','runway']},
+{en:'Fun effects / social clips',ko:'재미있는 효과 / 소셜 클립',result:['pika','kling','runway']},
+{en:'Voiceover / voice cloning',ko:'보이스오버 / 음성 클로닝',result:['elevenlabs','descript','heygen']},
+{en:'Music / songs creation',ko:'음악 / 노래 제작',result:['suno','elevenlabs','descript']},
+{en:'Podcast editing',ko:'팟캐스트 편집',result:['descript','elevenlabs','otter']}
+]},
+dev_q:{en:"What's your coding experience?",ko:'코딩 경험이 어느 정도인가요?',sub_en:"We'll match the right level of tool.",sub_ko:'수준에 맞는 도구를 추천합니다.',
+options:[
+{en:'No coding experience',ko:'코딩 경험 없음',result:['lovable','bolt','replit']},
+{en:'Beginner (learning)',ko:'초보 (학습 중)',result:['cursor','lovable','bolt']},
+{en:'Intermediate developer',ko:'중급 개발자',result:['cursor','windsurf','copilot']},
+{en:'Advanced / professional',ko:'숙련된 전문가',result:['cursor','claude-code','copilot']}
+]},
+research_q:{en:'What kind of research?',ko:'어떤 조사인가요?',sub_en:'Different tools for different research needs.',sub_ko:'조사 목적에 따라 최적 도구가 다릅니다.',
+options:[
+{en:'Competitor / market analysis',ko:'경쟁사 / 시장 분석',result:['perplexity','claude','grok']},
+{en:'Academic / scientific research',ko:'학술 / 과학 연구',result:['perplexity','notebooklm','claude']},
+{en:'Real-time news / trends',ko:'실시간 뉴스 / 트렌드',result:['grok','perplexity','chatgpt']},
+{en:'Analyze my own documents',ko:'내 문서 분석',result:['notebooklm','claude','chatgpt']}
+]},
+meeting_q:{en:'What meeting/notes task?',ko:'어떤 회의/메모 작업인가요?',sub_en:'Never miss an action item again.',sub_ko:'액션 아이템을 다시는 놓치지 마세요.',
+options:[
+{en:'Transcribe & summarize meetings',ko:'회의 녹음 & 요약',result:['otter','descript','notion']},
+{en:'Organize notes & docs',ko:'메모 & 문서 정리',result:['notion','claude','chatgpt']},
+{en:'Create follow-up tasks',ko:'후속 작업 생성',result:['notion','zapier','copilot365']}
+]},
+ppt_q:{en:'What kind of presentation?',ko:'어떤 프레젠테이션인가요?',sub_en:'AI makes slides creation 10x faster.',sub_ko:'AI가 슬라이드 제작을 10배 빠르게 합니다.',
+options:[
+{en:'Business pitch / report deck',ko:'비즈니스 피치 / 보고서 덱',result:['gamma','canva','copilot365']},
+{en:'Creative / visual presentation',ko:'크리에이티브 / 비주얼 프레젠테이션',result:['gamma','canva','figma']},
+{en:'Quick internal slides',ko:'빠른 내부 슬라이드',result:['gamma','copilot365','chatgpt']}
+]},
+learn_q:{en:'What do you want to learn?',ko:'무엇을 학습하고 싶으세요?',sub_en:'AI can be your personal tutor.',sub_ko:'AI가 개인 튜터가 될 수 있습니다.',
+options:[
+{en:'Programming / coding',ko:'프로그래밍 / 코딩',result:['claude','cursor','chatgpt']},
+{en:'Data analysis / SQL',ko:'데이터 분석 / SQL',result:['claude','chatgpt','julius']},
+{en:'Business / finance concepts',ko:'비즈니스 / 금융 개념',result:['claude','chatgpt','perplexity']},
+{en:'Design / creative skills',ko:'디자인 / 크리에이티브 스킬',result:['canva','figma','midjourney']}
+]}
+};
+
+var lang='en',currentCat='all',wizardStep='start';
+function updatePH(){var g=document.getElementById('gate-email');if(g)g.placeholder=lang==='ko'?'업무용 이메일을 입력해주세요':'Enter your work email';var s=document.getElementById('search-input');if(s)s.placeholder=lang==='ko'?'도구 이름으로 검색...':'Search by name...'}
+function enterSite(){var e=document.getElementById('gate-email').value.trim(),err=document.getElementById('gate-err');if(!e||!e.includes('@')||!e.includes('.')){err.textContent=lang==='ko'?'유효한 이메일을 입력해주세요.':'Please enter a valid email.';return}err.textContent='';document.getElementById('gate').classList.add('hidden')}
+function skipGate(){document.getElementById('gate').classList.add('hidden')}
+function toggleLang(){lang=lang==='en'?'ko':'en';document.body.dataset.lang=lang;updatePH();renderAll()}
+function showPage(id){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});document.getElementById('page-'+id).classList.add('active');document.querySelectorAll('.nav-r a').forEach(function(a){a.classList.remove('active')});var n=document.getElementById('nav-'+id);if(n)n.classList.add('active');window.scrollTo(0,0);if(id==='wizard'){wizardStep='start';renderWizard()}}
+function browseCat(cat){currentCat=cat;showPage('browse');renderFilters();renderTools()}
+function renderCats(){var g=document.getElementById('cat-grid');g.innerHTML='';CATS.forEach(function(c){var cnt=T.filter(function(t){return t.cat===c.id}).length;var div=document.createElement('div');div.className='cat-card';div.onclick=function(){browseCat(c.id)};div.innerHTML='<div class="cat-icon"><svg viewBox="0 0 24 24">'+c.svg+'</svg></div><div class="cat-name">'+(lang==='ko'?c.ko:c.en)+'</div><div class="cat-count">'+(lang==='ko'?cnt+'개 도구':cnt+' tools')+'</div>';g.appendChild(div)})}
+function renderFilters(){var tabs=document.getElementById('filter-tabs');tabs.innerHTML='';var all=[{id:'all',en:'All ('+T.length+')',ko:'전체 ('+T.length+')'}];CATS.forEach(function(c){var cnt=T.filter(function(t){return t.cat===c.id}).length;all.push({id:c.id,en:c.en+' ('+cnt+')',ko:c.ko+' ('+cnt+')'})});all.forEach(function(c){var btn=document.createElement('button');btn.className='filter-tab'+(currentCat===c.id?' active':'');btn.textContent=lang==='ko'?c.ko:c.en;btn.onclick=function(){currentCat=c.id;renderFilters();renderTools()};tabs.appendChild(btn)})}
+function renderTools(){var grid=document.getElementById('tools-grid'),q=(document.getElementById('search-input').value||'').toLowerCase();var f=T.filter(function(t){return(currentCat==='all'||t.cat===currentCat)&&(!q||t.name.toLowerCase().includes(q)||t.company.toLowerCase().includes(q)||t.tags.some(function(tag){return tag.toLowerCase().includes(q)}))});var info=document.getElementById('tool-count-info');info.textContent=lang==='ko'?'총 '+f.length+'개 도구':'Showing '+f.length+' tools';if(!f.length){grid.innerHTML='<div class="no-results">'+(lang==='ko'?'도구를 찾을 수 없습니다.':'No tools found.')+'</div>';return}grid.innerHTML=f.map(function(t){return'<div class="tool-card"><div class="tool-top"><div class="tool-icon">'+t.icon+'</div><div><div class="tool-name">'+t.name+'</div><div class="tool-company">'+t.company+'</div></div></div><div class="tool-desc">'+(lang==='ko'?t.ko:t.en)+'</div><div class="tool-tags">'+t.tags.map(function(tag){return'<span class="tool-tag">'+tag+'</span>'}).join('')+'</div><div class="tool-pricing">'+t.price+'</div><a href="https://'+t.url+'" target="_blank" class="tool-link">'+(lang==='ko'?'방문':'Visit')+'  &rarr;</a></div>'}).join('')}
+function filterTools(){renderTools()}
+function renderWizard(){var card=document.getElementById('wizard-card'),step=WIZARD[wizardStep];if(!step)return;var h='<div class="wizard-q">'+(lang==='ko'?step.ko:step.en)+'</div><div class="wizard-sub">'+(lang==='ko'?step.sub_ko:step.sub_en)+'</div><div class="wizard-options">';step.options.forEach(function(o,i){h+=o.result?'<button class="wizard-opt" onclick="showResult(\''+wizardStep+'\','+i+')">'+(lang==='ko'?o.ko:o.en)+'</button>':'<button class="wizard-opt" onclick="wizardStep=\''+o.next+'\';renderWizard()">'+(lang==='ko'?o.ko:o.en)+'</button>'});h+='</div>';card.innerHTML=h}
+function showResult(sk,idx){var o=WIZARD[sk].options[idx],ids=o.result,card=document.getElementById('wizard-card');var h='<div class="wizard-q">'+(lang==='ko'?'추천 결과':'Our recommendations')+'</div><div class="wizard-sub">'+(lang==='ko'?'"'+o.ko+'" 기준:':'For "'+o.en+'":')+'</div>';ids.forEach(function(id,r){var t=T.find(function(x){return x.id===id});if(!t)return;var lb=r===0?(lang==='ko'?'최고 추천':'Top pick'):r===1?(lang==='ko'?'대안':'Runner-up'):(lang==='ko'?'참고':'Also consider');h+='<div class="wizard-result"><h4>'+t.name+' <span style="font-size:10px;opacity:.5;font-family:var(--font-b)">'+lb+'</span></h4><p>'+(lang==='ko'?t.ko:t.en)+'</p><div style="margin-top:6px"><span class="tool-tag">'+t.price+'</span> <a href="https://'+t.url+'" target="_blank" class="tool-link" style="margin-left:6px">'+(lang==='ko'?'방문':'Visit')+'</a></div></div>'});h+='<div class="wizard-restart" onclick="wizardStep=\'start\';renderWizard()">'+(lang==='ko'?'&larr; 처음부터 다시':'&larr; Start over')+'</div>';card.innerHTML=h}
+function renderAll(){renderCats();renderFilters();renderTools();renderWizard()}
+document.body.dataset.lang=lang;updatePH();renderAll();
+</script>
 </body>
 </html>
