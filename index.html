@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMMONAI | The Golden Ratio of Business Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 초기화 및 전체 폰트 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #1A2533; /* 포실 네이비 */
+            color: #E0E5EC; /* 가독성 좋은 옅은 회색 */
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* 중앙 컨텐츠 영역 */
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        /* 로고 스타일 (황금비율 느낌의 타이포그래피) */
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .logo span {
+            color: #B8860B; /* 앤틱 골드 */
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* 메인 카피 */
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+        }
+
+        /* 서브 카피 */
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #A0AAB5;
+            margin-bottom: 40px;
+            word-break: keep-all;
+        }
+
+        /* 이메일 입력 폼 (웨이트리스트) */
+        .waitlist-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+        .waitlist-form input {
+            padding: 12px 20px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(184, 134, 11, 0.3);
+            border-radius: 4px;
+            color: #ffffff;
+            width: 300px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .waitlist-form input:focus {
+            border-color: #B8860B;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .waitlist-form button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            background-color: #B8860B; /* 골드 버튼 */
+            color: #1A2533;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .waitlist-form button:hover {
+            background-color: #D4AF37; /* 마우스 올렸을 때 밝은 골드 */
+        }
+
+        /* 푸터 */
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.8rem;
+            color: #6C7A89;
+            letter-spacing: 0.05em;
+        }
+
+        /* 등장 애니메이션 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 모바일 반응형 처리 */
+        @media (max-width: 600px) {
+            .logo { font-size: 2.5rem; }
+            h1 { font-size: 1.4rem; }
+            .waitlist-form { flex-direction: column; align-items: center; }
+            .waitlist-form input { width: 100%; margin-bottom: 10px; }
+            .waitlist-form button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">AMMONAI<span>.ai</span></div>
+        
+        <h1>비즈니스의 황금비율을 완성하는 지능</h1>
+        
+        <p>수만 개의 AI 도구 중, 당신의 성과를 극대화할 단 1%의 조합만을 엄선합니다.<br>
+        전문가의 시각으로 검증된 AI 큐레이션 플랫폼이 곧 찾아옵니다.</p>
+
+        <form class="waitlist-form" onsubmit="event.preventDefault(); alert('사전 예약이 완료되었습니다. (테스트용)');">
+            <input type="email" placeholder="업무용 이메일을 입력해주세요" required>
+            <button type="submit">사전 예약하기</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        © 2026 AMMONAI. The Golden Ratio of Business Intelligence.
+    </div>
+
+</body>
+</html>
